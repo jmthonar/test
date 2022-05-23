@@ -127,14 +127,14 @@ JM_TXT = "مـن لا يتعلم من الماضي لا يرحمه المستق�
 async def _(event):
     reply_to_id = await reply_id(event)
     start = datetime.now()
-    roz = await event.reply(
-        "<b><i>  ❤️⃝⃝⃝⃝⃝⃝⃝⃝⃝⃝⃝⃝⃝⃝⃟✨ البــــنك... 🍀⃝⃝⃟🍂 </b></i>", "html"
+    roz = await event.edit("
+        "**❤️⃝⃝⃝⃝⃝⃝⃝⃝⃝⃝⃝⃝⃝⃝⃟✨ البــــنك... 🍀⃝⃝⃟🍂**"
     )
     end = datetime.now()
     await roz.delete()
     ms = (end - start).microseconds / 1000
     if PING_PIC:
-        caption = f"{JM_TXT}\n┏━━━━━━━┓\n┃ ✦ {ms}\n┃ ✦\n┗━━━━━━━┛"
+        caption = f"**{JM_TXT}**\n┏━━━━━━━┓\n┃ ✦ **{ms}**\n┃ ✦\n┗━━━━━━━┛"
         await event.client.send_file(
             event.chat_id,
             PING_PIC,
