@@ -126,7 +126,8 @@ async def _(event):
 
 PING_PIC = "https://telegra.ph/file/502a2c9751c3c06222c51.jpg"
 JM_TXT = "مـن لا يتعلم من الماضي لا يرحمه المستقبل  . 🖤"
-@jmthon.on(events.NewMessage(outgoing=True, pattern=".بنك")
+
+@jmthon.on(events.NewMessage(outgoing=True, pattern=".بنك"))
 async def _(event):
     reply_to_id = await reply_id(event)
     start = datetime.now()
