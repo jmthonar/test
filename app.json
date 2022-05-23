@@ -6,6 +6,14 @@
       "description": "الايبب ايدي",
       "value": ""
     },
+    "ALIVE_NAME": {
+      "description": "اسم حسابك",
+      "value": ""
+    },
+    "DEFAULTUSERBIO": {
+      "description": "بايو حسابك - نبذه حسابك ",
+      "value": ""
+    },
     "API_HASH": {
       "description": "الايبي هاش",
       "value": ""
