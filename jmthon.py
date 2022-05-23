@@ -127,7 +127,7 @@ JM_TXT = "مـن لا يتعلم من الماضي لا يرحمه المستق�
 async def _(event):
     reply_to_id = await reply_id(event)
     start = datetime.now()
-    roz = await event.edit("
+    roz = await event.edit(
         "**❤️⃝⃝⃝⃝⃝⃝⃝⃝⃝⃝⃝⃝⃝⃝⃟✨ البــــنك... 🍀⃝⃝⃟🍂**"
     )
     end = datetime.now()
