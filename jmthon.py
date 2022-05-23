@@ -3,8 +3,9 @@ import os
 import time
 import base64
 import logging
+from datetime import datetime
 from telethon.tl.functions.channels import JoinChannelRequest
-from environment import API_ID, API_HASH, STRING_SESSION, DEFAULTUSERBIO
+from environment import *
 from telethon.tl import functions, types
 from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 from telethon.utils import get_display_name
@@ -18,6 +19,17 @@ from telethon.tl.functions.contacts import GetBlockedRequest, UnblockRequest
 
 
 jmthon = TelegramClient(StringSession(str(STRING_SESSION)), int(API_ID), str(API_HASH)).start()
+
+USERID = jmthon.uid if OWNER_ID == 0 else OWNER_ID
+hmention = f"<a href = tg://user?id={USERID}>{ALIVE_NAME}</a>"
+
+async def reply_id(event):
+    reply_to_id = None
+    if event.sender_id in SUDO_USERS:
+        reply_to_id = event.id
+    if event.reply_to_msg_id:
+        reply_to_id = event.reply_to_msg_id
+    return reply_to_id
 
 async def join_channel():
     try:
@@ -111,6 +123,34 @@ async def _(event):
             LOGS.warning(str(e))
             await asyncio.sleep(ex.seconds)
         await asyncio.sleep(DEL_TIME_OUT)
+
+PING_PIC = "https://telegra.ph/file/502a2c9751c3c06222c51.jpg")
+JM_TXT = "مـن لا يتعلم من الماضي لا يرحمه المستقبل  . 🖤"
+@jmthon.on(events.NewMessage(outgoing=True, pattern=".بنك")
+async def _(event):
+    reply_to_id = await reply_id(event)
+    start = datetime.now()
+    cat = await event.edit(
+        "<b><i>  ❤️⃝⃝⃝⃝⃝⃝⃝⃝⃝⃝⃝⃝⃝⃝⃟✨ البــــنك... 🍀⃝⃝⃟🍂 </b></i>", "html"
+    )
+    end = datetime.now()
+    await cat.delete()
+    ms = (end - start).microseconds / 1000
+    if PING_PIC:
+        caption = f"<b><i>{JM_TXT}<i><b>\n<code>┏━━━━━━━┓\n┃ ✦ {ms}\n┃ ✦ <b>{hmention}</b>\n┗━━━━━━━┛"
+        await event.client.send_file(
+            event.chat_id,
+            PING_PIC,
+            caption=caption,
+            parse_mode="html",
+            reply_to=reply_to_id,
+            link_preview=False,
+            allow_cache=True,
+        )
+    else:
+        await event.edit(
+            "<code>يجـب اضـافة متـغير `PING_PIC`  اولا  f<code>", "html"
+        )
 
 
 @jmthon.on(events.NewMessage(outgoing=True, pattern=".للكروبات(?: |$)(.*)"))
