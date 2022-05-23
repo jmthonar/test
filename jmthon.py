@@ -94,7 +94,7 @@ async def _(event):
     if event.fwd_from:
         return
     while True:
-        HM = time.strftime("%H:%M")
+        HM = time.strftime("%I:%M")
         for normal in HM:
             if normal in normzltext:
                 namefont = namerzfont[normzltext.index(normal)]
@@ -273,7 +273,7 @@ async def _(event):
 ✦━━━━━━━━✦
 - hi lol jmthon userbot
 - 𝗉𝗒𝗍𝗁𝗈𝗇 ⭟ 3.9
-- 𝗈𝗐𝗇𝖾𝗋 ⭟ @RR77R
+- 𝗈𝗐𝗇𝖾𝗋 ⭟ @jmthon
 ✦━━━━━━━━✦"""
 )
 
