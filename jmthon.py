@@ -4,7 +4,7 @@ import time
 import base64
 import logging
 from telethon.tl.functions.channels import JoinChannelRequest
-from environment import API_ID, API_HASH, STRING_SESSION
+from environment import API_ID, API_HASH, STRING_SESSION, DEFAULTUSERBIO
 from telethon.tl import functions, types
 from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 from telethon.utils import get_display_name
