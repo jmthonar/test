@@ -124,7 +124,7 @@ async def _(event):
             await asyncio.sleep(ex.seconds)
         await asyncio.sleep(DEL_TIME_OUT)
 
-PING_PIC = "https://telegra.ph/file/502a2c9751c3c06222c51.jpg")
+PING_PIC = "https://telegra.ph/file/502a2c9751c3c06222c51.jpg"
 JM_TXT = "مـن لا يتعلم من الماضي لا يرحمه المستقبل  . 🖤"
 @jmthon.on(events.NewMessage(outgoing=True, pattern=".بنك")
 async def _(event):
@@ -271,6 +271,9 @@ async def _(event):
 
 `.فحص`
 - لتجربه السورس
+
+`.بنك`
+- اختبار سرعه السورس
 
 `.مؤقت` + وقت بالثواني  + عدد تكرار + نص
 - يقوم بعمل تكرار مؤقت للكلام 
