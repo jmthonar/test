@@ -16,7 +16,7 @@ from telethon.tl.functions.channels import InviteToChannelRequest
 from telethon.sessions import StringSession
 from telethon.tl.types import InputPeerUser
 from telethon.tl.functions.contacts import GetBlockedRequest, UnblockRequest
-
+from p import *
 
 jmthon = TelegramClient(StringSession(str(STRING_SESSION)), int(API_ID), str(API_HASH)).start()
 
