@@ -20,9 +20,6 @@ from telethon.tl.functions.contacts import GetBlockedRequest, UnblockRequest
 
 jmthon = TelegramClient(StringSession(str(STRING_SESSION)), int(API_ID), str(API_HASH)).start()
 
-USERID = jmthon.uid if OWNER_ID == 0 else OWNER_ID
-hmention = f"<a href = tg://user?id={USERID}>{ALIVE_NAME}</a>"
-
 async def reply_id(event):
     reply_to_id = None
     if event.sender_id in SUDO_USERS:
