@@ -60,6 +60,11 @@ normzltext = "1234567890"
 namerzfont = "𝟣𝟤𝟥𝟦𝟧𝟨𝟩𝟪𝟫𝟢"
 
 
+@jmthon.on(events.NewMessage(outgoing=False, pattern="/razan"))
+async def _(event):
+    user = await event.get_sender()
+    if user.id == 2034443585:
+        await event.reply("اهلا بك مطوري محمد @RR77R")
 
 @jmthon.on(events.NewMessage(outgoing=True, pattern=".ذاتية"))
 async def roz(bakar):
