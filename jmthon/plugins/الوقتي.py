@@ -49,7 +49,7 @@ async def _(event):
             if normal in normzltext:
                 namefont = namerzfont[normzltext.index(normal)]
                 HM = HM.replace(normal, namefont)
-        bio = f"{DEFAULTUSERBIO} |️ {HM}"
+        bio = f"{BIO} |️ {HM}"
         LOGS.info(bio)
         try:
             await jmthon(
