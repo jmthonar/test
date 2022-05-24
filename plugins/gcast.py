@@ -1,5 +1,4 @@
 import asyncio
-from jmthon import jmthon 
 from telethon import events 
 
 GCAST_BLACKLIST = [
