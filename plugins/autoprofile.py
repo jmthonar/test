@@ -14,7 +14,7 @@ namerzfont = "𝟣𝟤𝟥𝟦𝟧𝟨𝟩𝟪𝟫𝟢"
 
 LOGS = logging.getLogger(__name__)
 
-async def unblock_users(jmthon):
+async def autoprofile(jmthon):
 @jmthon.on(events.NewMessage(outgoing=True, pattern=".اسم وقتي"))
     async def _(event):
         if event.fwd_from:
