@@ -3,7 +3,7 @@ import functools
 import shlex
 from typing import Tuple
 from telethon import functions, types
-from . logging import *
+from .logging import *
 LOGS = logging.getLogger("jmthon")
 
 async def runcmd(cmd: str) -> Tuple[str, str, int, int]:
