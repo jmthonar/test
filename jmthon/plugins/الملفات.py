@@ -1,8 +1,10 @@
 import os
+import asyncio
 from pathlib import Path
 from jmthon import jmthon
+from telethon import events
 
-@jmthon.on(events.NewMessage(outgoing=True, pattern"^.تنصيب$"))
+@jmthon.on(events.NewMessage(outgoing=True, pattern="^.تنصيب (.*)"))
 async def install(event):
     if event.reply_to_msg_id:
         try:
