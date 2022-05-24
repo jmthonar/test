@@ -1,11 +1,15 @@
-import asyncio
+import time
+from datetime import datetime
+import logging
 from telethon import TelegramClient, events
 from telethon.sessions import StringSession
-from config import API_ID, API_HASH, STRING_SESSION
+from config import *
 
-jmthon = TelegramClient(StringSession(str(STRING_SESSION)), int(API_ID), str(API_HASH)).start()
-loop = asyncio.get_event_loop()
+logging.basicConfig(
+    level=logging.INFO, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+)
 
-
-print("تم التنصيب")
-jmthon.run_until_disconnected()
+LOGGER = logging.getLogger(__name__)
+StartTime = time.time()
+jmthon = TelegramClient(StringSession(STRING_SESSION), api_id=API_ID, api_hash=API_HASH)
+#
