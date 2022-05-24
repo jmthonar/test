@@ -16,7 +16,7 @@ namerzfont = "𝟣𝟤𝟥𝟦𝟧𝟨𝟩𝟪𝟫𝟢"
 
 LOGS = logging.getLogger(__name__)
 
-@jmthon.on(events.NewMessage(outgoing=True, pattern=".اسم وقتي"))
+@jmthon.on(events.NewMessage(outgoing=True, pattern="^.اسم وقتي$"))
 async def _(event):
     if event.fwd_from:
         return
@@ -39,7 +39,7 @@ async def _(event):
             await asyncio.sleep(ex.seconds)
         await asyncio.sleep(DEL_TIME_OUT)
 
-@jmthon.on(events.NewMessage(outgoing=True, pattern=".بايو وقتي"))
+@jmthon.on(events.NewMessage(outgoing=True, pattern="^.بايو وقتي$"))
 async def _(event):
     if event.fwd_from:
         return
