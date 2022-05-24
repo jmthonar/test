@@ -24,7 +24,7 @@ async def unblock_users(jmthon):
                 )
             unblocked_count = 1
             razan = await event.edit(
-                f"- تم الغاء حظر : {len(list.blocked)}\n\n- تم المستخدمين المحظورين في الخاص بنجاح  ."
+                f"- تم الغاء حظر : {len(list.blocked)}\n\n- تم مسح المستخدمين المحظورين في الخاص بنجاح  ."
             )
 
 
