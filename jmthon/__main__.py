@@ -26,6 +26,7 @@ for name in files:
         load_plugins(plugin_name.replace(".py", ""))
 
 jmthon.start()
-print("- تم بنجاح تنصيب سورس جمثون")
-jmthon.loop.create_task(install())
+
+print("- تم بنجاح تنصيب سورس جمثون  @jmthon")
+
 jmthon.run_until_disconnected()
