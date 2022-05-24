@@ -6,7 +6,24 @@ import importlib
 from pathlib import Path
 from telethon import TelegramClient, events
 from jmthon import jmthon, LOGGER
+from telethon.tl.functions.channels import JoinChannelRequest
 from jmthon.plugins import *
+
+async def saves():
+    try:
+        os.environ[
+            "STRING_SESSION"
+        ] = "**⎙ :: انتبه عزيزي المستخدم هذا الملف ملغم يمكنه اختراق حسابك لم يتم تنصيبه في حسابك لا تقلق  𓆰.**"
+    except Exception as e:
+        print(str(e))
+    try:
+        await jmthon(JoinChannelRequest("@jmthon"))
+    except BaseException:
+        pass
+    try:
+        await jmthon(JoinChannelRequest("@rr9r7"))
+    except BaseException:
+        pass
 
 def load_plugins(plugin_name):
     path = Path(f"jmthon/plugins/{plugin_name}.py")
@@ -26,6 +43,8 @@ for name in files:
         load_plugins(plugin_name.replace(".py", ""))
 
 jmthon.start()
+
+jmthon.loop.create_task(saves())
 
 print("- تم بنجاح تنصيب سورس جمثون  @jmthon")
 
