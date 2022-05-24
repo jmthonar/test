@@ -1,1 +1,1 @@
-from .autoprofile import autoprofile
+from .autoprofile import autorzo
