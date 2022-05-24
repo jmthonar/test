@@ -5,7 +5,6 @@ import requests
 from telethon import __version__ as __tele_version__
 from telethon import events, TelegramClient
 from jmthon import jmthon, StartTime
-from config import PREFIX
 
 def get_readable_time(seconds: int) -> str:
     count = 0
