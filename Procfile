@@ -1,1 +1,1 @@
-worker: python3 jmthon.py
+worker: python3 plugins.py
