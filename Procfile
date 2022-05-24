@@ -1,1 +1,1 @@
-worker: python3 plugins.py
+worker: python3 plugins
