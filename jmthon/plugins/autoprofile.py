@@ -5,6 +5,7 @@ import random
 import shutil
 import time
 from datetime import datetime
+from telethon import events
 from telethon.errors import FloodWaitError
 from telethon.tl import functions
 from jmthon import jmthon
