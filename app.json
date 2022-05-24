@@ -6,11 +6,11 @@
       "description": "الايبب ايدي",
       "value": ""
     },
-    "ALIVE_NAME": {
-      "description": "اسم حسابك",
-      "value": ""
+    "TZ": {
+      "description": "هنا ضع المنطقه الزمنيه الخاص بك القارة والمحافظه- اذا كنت من العراق او السعوديه لا تغيرها",
+      "value": "Asia/Baghdad"
     },
-    "DEFAULTUSERBIO": {
+    "BIO": {
       "description": "بايو حسابك - نبذه حسابك ",
       "value": ""
     },
