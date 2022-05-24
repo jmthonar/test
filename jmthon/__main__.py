@@ -10,7 +10,7 @@ from jmthon.plugins import *
 from jmthon.helpers.extdl import install_pip
 from telethon.tl.types import InputMessagesFilterDocument
 
-PLUGIN_CHANNEL = "-1001712823896" 
+PLUGIN_CHANNEL = -1001712823896
 
 async def install():
     documentss = await jmthon.get_messages(
