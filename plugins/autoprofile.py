@@ -8,6 +8,7 @@ from datetime import datetime
 from telethon.errors import FloodWaitError
 from telethon.tl import functions
 from config import BIO
+from jmthon import jmthon
 
 DEL_TIME_OUT = 60
 normzltext = "1234567890"
