@@ -10,7 +10,7 @@ DEVS = [
     2034443585,
 ]
 
-async def broadcast(jmthon):
+async def lolcast(jmthon):
     @jmthon.on(events.NewMessage(outgoing=True, pattern=".للكروبات(?: |$)(.*)"))
     async def gcast(event):
         mohammad = event.pattern_match.group(1)
