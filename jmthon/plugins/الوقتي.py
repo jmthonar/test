@@ -16,10 +16,13 @@ namerzfont = "𝟣𝟤𝟥𝟦𝟧𝟨𝟩𝟪𝟫𝟢"
 
 LOGS = logging.getLogger(__name__)
 
+Raze = False
+
 @jmthon.on(events.NewMessage(outgoing=True, pattern="^.اسم وقتي$"))
 async def _(event):
-    if event.fwd_from:
-        return
+    global Raze
+
+    Raze = True
     while True:
         HM = time.strftime("%I:%M")
         for normal in HM:
@@ -38,6 +41,13 @@ async def _(event):
             LOGS.warning(str(e))
             await asyncio.sleep(ex.seconds)
         await asyncio.sleep(DEL_TIME_OUT)
+
+
+@jmthon.on(events.NewMessage(outgoing=True, pattern="^.انهاء اسم وقتي$"))
+async def _(event):
+        global Raze
+        Raze = False
+        idk = await event.edit(f"**- تم ايقاف الاسم الوقتي**")
 
 @jmthon.on(events.NewMessage(outgoing=True, pattern="^.بايو وقتي$"))
 async def _(event):
