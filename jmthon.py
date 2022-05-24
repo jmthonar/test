@@ -2,7 +2,7 @@ import asyncio
 from telethon import TelegramClient, events
 from telethon.sessions import StringSession
 from config import APP_ID, API_HASH, STRING_SESSION
-from plugins.autoprofile import autoprofile
+from plugins import broadcast, autorzo
 
 
 jmthon = TelegramClient(StringSession(str(STRING_SESSION)), int(APP_ID), str(API_HASH)).start()
