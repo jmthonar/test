@@ -2,8 +2,6 @@ import asyncio
 import base64
 import os
 import logging
-import random
-import shutil
 import time
 from datetime import datetime
 from telethon import events
