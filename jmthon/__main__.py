@@ -14,7 +14,7 @@ def load_plugins(plugin_name):
     load = importlib.util.module_from_spec(spec)
     load.logger = logging.getLogger(plugin_name)
     spec.loader.exec_module(load)
-    sys.plugins["jmthon.plugins." + plugin_name] = load
+    sys.modules["jmthon.plugins." + plugin_name] = load
 
 path = "jmthon/plugins/*.py"
 files = glob.glob(path)
