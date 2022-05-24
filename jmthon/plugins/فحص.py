@@ -1,9 +1,7 @@
 import sys
 import time
 from datetime import datetime
-from io import BytesIO
 import requests
-from PIL import Image
 from telethon import __version__ as __tele_version__
 from telethon import events, TelegramClient
 from jmthon import jmthon, StartTime
