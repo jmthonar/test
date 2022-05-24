@@ -7,6 +7,7 @@ import time
 from datetime import datetime
 from telethon.errors import FloodWaitError
 from telethon.tl import functions
+from jmthon import jmthon
 from config import BIO
 
 DEL_TIME_OUT = 60
