@@ -3,7 +3,7 @@ import os
 APP_ID = os.environ.get("APP_ID", None)
 API_HASH = os.environ.get("API_HASH", None)
 STRING_SESSION = os.environ.get("STRING_SESSION", None)
-DEFAULTUSERBIO = os.environ.get("DEFAULTUSERBIO", None)
+BIO = os.environ.get("BIO", None)
 TZ = os.environ.get("TZ", "Asia/Baghdad")
 OWNER_ID = int(os.environ.get("OWNER_ID") or 0)
 ALIVE_NAME = os.environ.get("ALIVE_NAME", None)
