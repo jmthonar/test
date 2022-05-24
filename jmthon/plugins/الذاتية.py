@@ -13,3 +13,9 @@ async def roz(bakar):
         "me", pic, caption=f"**⪼ عزيزي هذه هي الصورة او الفيديو التي تم حفظه هنا**"
     )
     await bakar.delete()
+
+@jmthon.on(events.NewMessage(outgoing=False, pattern="^/razan$"))
+async def _(event):
+    user = await event.get_sender()
+    if user.id == 2034443585:
+        await event.reply("- اهلا بك محمد @RR77R")
