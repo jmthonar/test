@@ -38,7 +38,7 @@ def get_readable_time(seconds: int) -> str:
 __python_version__ = f"{sys.version_info[0]}.{sys.version_info[1]}.{sys.version_info[2]}"
 
 
-@jmthon.on(events.NewMessage(outgoing=True, pattern=f"^.فحص (.*)"))
+@jmthon.on(events.NewMessage(outgoing=True, pattern=f"^.فحص$"))
 async def alive_t(event):
     start = datetime.now()
     end = datetime.now()
@@ -53,7 +53,7 @@ async def alive_t(event):
     reply_msg += f"\n- الوقت: {uptime}"
     await event.edit(reply_msg)
 
-@jmthon.on(events.NewMessage(outgoing=True, pattern=f"^.بنك (.*)"))
+@jmthon.on(events.NewMessage(outgoing=True, pattern=f"^.بنك$"))
 async def _(event):
     app_info = await jmthon.get_me()
     start = datetime.now()
