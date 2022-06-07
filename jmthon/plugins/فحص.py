@@ -45,7 +45,7 @@ async def alive_t(event):
     reply_msg = f"**[۩▬▬ 𝐉𝐌𝐓𝐇𝐎𝐍 𝐔𝐒𝐄𝐑𝐁𝐎𝐓 ▬▬۩](https://t.me/jmthon)**\n━━━━━━━━━━━━━━━━━━\n"
     reply_msg += f"أصدار البايثون: `{__python_version__}`\n"
     reply_msg += f"أصدار التيليثون: `{__tele_version__}`\n"
-    reply_msg += f"أصدار جمثون:** `0.1`**\n"
+    reply_msg += f"أصدار جمثون:** `0.2`**\n"
     reply_msg += f"━━━━━━━━━━━━━━━━━━"
     end_time = time.time()
     reply_msg += f"\n- الوقت: {uptime}"
