@@ -1,4 +1,4 @@
 git clone https://github.com/jmthonar/t jmthon
 cd t
 pip3 install -U -r requirements.txt
-python3 jmthon
+python3 -m jmthon
