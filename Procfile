@@ -1,1 +1,1 @@
-worker: python3 -m jmthon
+worker: bash jasem
